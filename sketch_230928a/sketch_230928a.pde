@@ -4,7 +4,7 @@
 //Global Variables
 int appWidth, appHeight;
 float backgroundImageX, backgroundImageY, backgroundImageWidth, backgroundImageHeight;
-PImage picBackground;
+PImage picBackground, roseForeground, rosePortrait;
 Boolean nightmode=false; //Note: clock will turn on automatically
 Boolean brightnessControl=false; //Note: ARROWS
 int brightnessNumber=128; //Range:1-255
@@ -30,10 +30,18 @@ void setup() {
   backgroundImageY = appHeight*0;
   backgroundImageWidth = appWidth-1;
   backgroundImageHeight = appHeight-1;
-  picBackground = loadImage("../../../Github/ImagesUsed/https://iheartcraftythings.com/wp-content/uploads/2021/05/Rose-DRAWING-%E2%80%93-STEP-10.jpg")");
+  String up = "..";
+  String open = "/";
+  String imagesPath = up + open + up + open + up + open; 
+  String landScapeImage = "Github/ImagesUsed/"
+  picBackground = loadImage( imagesPath + landScapeImage + "Rose-DRAWING-–-STEP-10.jpg");
+  roseForeground = loadImage();
+  rosePortrait = loadImage();
  //
   //DIVs
   //rect( backgroundImageX, backgroundImageY, backgroundImageWidth, backgroundImageHeight );
+  rect(); //rose image
+  rect(); //rose image
   //
  //End setup
 //
@@ -58,8 +66,11 @@ void draw() {
     tint ( 64, 64, 40 );
   } else {
     noTint(); //See Processing DOC
+    //println(nightmode);
   }
   image( picBackground, backgroundImageX, backgroundImageY, backgroundImageWidth, backgroundImageHeight );
+  image(roseforeground );//rose image
+  image(rosePortrait. );rose image 
 } //End draw
 //
 void keyPressed() {
@@ -74,6 +85,7 @@ void keyPressed() {
   //NOTE: Nightmode does turn off
   if ( key==CODED && keyCode==UP || keyCode==DOWN ) { //Brightness keybind
     brightnessControl = true;
+    //builtin BUG 
     if ( key==CODED && keyCode==UP ) brightnessNumber++ ; //brightnessNumber+=1 //brightnessNumber = brightnessNumber+1
     if ( key==CODED && keyCode==DOWN ) brightnessNumber-- ; //brightnessNumber-=1
     //CONTINUE HERE with brightness toggles
