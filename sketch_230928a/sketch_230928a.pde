@@ -4,6 +4,8 @@
 //Global Variables
 int appWidth, appHeight;
 float backgroundImageX, backgroundImageY, backgroundImageWidth, backgroundImageHeight;
+float roseX, roseY, roseWidth, roseHeight;
+float roseX, roseY, roseWidth, roseHeight;
 PImage picBackground, roseForeground, rosePortrait;
 Boolean nightmode=false; //Note: clock will turn on automatically
 Boolean brightnessControl=false; //Note: ARROWS
@@ -30,18 +32,40 @@ void setup() {
   backgroundImageY = appHeight*0;
   backgroundImageWidth = appWidth-1;
   backgroundImageHeight = appHeight-1;
+  roseX = appWidth*1/14;
+  roseY = appHeight*1/8;
+  roseWidth = appWidth*2.25/7;
+  roseHeight = appHeight*1/4;
+  roseX = roseX;
+  roseY = appHeight*5/8;
+  roseWidth = appWidth;
+  roseHeight = appHeight;
+   //Aspect Ratio Calculations
+  //Determine Aspect Ratio
+  //Compare dimension to get larger dimension
+  //Calculate Smaller Dimension
+  //Rewrite Variables based on rect() vars
+  roseImageWidth = ;
+  roseImageHeight = ;
+  roseImageWidth = ;
+  roseImageHeight =  ;
+  roseImageWidth = ;
+  roseImageHeight = ;
+  //Concatenation of Pathways
   String up = "..";
   String open = "/";
   String imagesPath = up + open + up + open + up + open; 
   String landScapeImage = "Github/ImagesUsed/"
+  String roseImage = "rose.png"
+  String roseImage = "rose.png"
   picBackground = loadImage( imagesPath + landScapeImage + "Rose-DRAWING-–-STEP-10.jpg");
   roseForeground = loadImage();
   rosePortrait = loadImage();
  //
   //DIVs
   //rect( backgroundImageX, backgroundImageY, backgroundImageWidth, backgroundImageHeight );
-  rect(); //rose image
-  rect(); //rose image
+  rect( roseX, roseY, roseWidth, roseHeight ); //rose image
+  rect( roseX, roseY, roseWidth, roseHeight ); //rose image
   //
  //End setup
 //
@@ -69,8 +93,8 @@ void draw() {
     //println(nightmode);
   }
   image( picBackground, backgroundImageX, backgroundImageY, backgroundImageWidth, backgroundImageHeight );
-  image(roseforeground );//rose image
-  image(rosePortrait. );rose image 
+  image(roseforeground,  roseX, roseY, roseWidth, roseHeight );//rose image, purpose: see circles in aspect ratio
+  image(rosePortrait,  roseX, roseY, roseWidth, roseHeight ); //rose, in Portrait, geometry is landscape, thus centered
 } //End draw
 //
 void keyPressed() {
