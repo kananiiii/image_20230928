@@ -51,6 +51,28 @@ void setup() {
   roseImageHeight =  ;
   roseImageWidth = ;
   roseImageHeight = ;
+  //Aspect Ratio Change
+  roseWidth = 225;
+  roseHeight = 224; 
+  roseWidth = 1000;
+  roseHeight = 1400;
+  float aspectRatio = 0.0; // Local Variable
+  float rectDimensionMemory = 0.0; // Assiagned ZERO b/c IF'
+  if ( roseWidth > roseHeight ) { //rose image if landscape
+  //Comparison Verifcation
+  println("ROSE is portrait")
+  } else { //rose image if landscape
+  } // End IF
+  if ( roseWidth > roseHeight ) { //rose image if landscape
+  //Comparison Verifcation
+  println("ROSE is landscape")
+  } else {//rose image if landscape
+  } // End IF
+  //Origonal Aspect Ratios of images to change
+  //Compare the side lengths whitch id brtt
+  //Comperss the biggest side into the rect
+  //Mutiypuly the Images aspect Ratio to the smaller side
+  //
   //Concatenation of Pathways
   String up = "..";
   String open = "/";
